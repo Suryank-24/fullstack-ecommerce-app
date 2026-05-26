@@ -11,15 +11,15 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/angular-e-commerce",
             "index": "src/index.html",
-            "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js",
-              "@angular/localize/init"
-            ],
+            "main": "src/main.ts",
+"polyfills": [
+  "zone.js",
+  "@angular/localize/init"
+],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -56,29 +56,28 @@
           },
           "defaultConfiguration": "production"
         },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "angular-e-commerce:build:production"
-            },
-            "development": {
-              "buildTarget": "angular-e-commerce:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
+"serve": {
+  "builder": "@angular-devkit/build-angular:dev-server",
+  "configurations": {
+    "production": {
+      "buildTarget": "angular-e-commerce:build:production"
+    },
+    "development": {
+      "buildTarget": "angular-e-commerce:build:development"
+    }
+  },
+  "defaultConfiguration": "development"
+},
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing",
-              "@angular/localize/init"
-            ],
+"polyfills": [
+  "zone.js",
+  "@angular/localize/init"
+],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",

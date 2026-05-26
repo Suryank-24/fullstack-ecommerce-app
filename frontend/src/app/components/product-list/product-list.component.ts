@@ -10,7 +10,7 @@ import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
   standalone: true,
   imports: [CommonModule, RouterModule,  NgbPaginationModule ],
   templateUrl: './product-list-grid.component.html',
-  styleUrl: './product-list.component.css'
+  styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit{
 

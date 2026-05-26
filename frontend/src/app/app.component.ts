@@ -9,7 +9,7 @@ import { SearchComponent } from "./components/search/search.component";
   standalone: true,
   imports: [RouterOutlet, ProductListComponent, RouterModule, ProductCategoryMenuComponent, SearchComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'angular-e-commerce';

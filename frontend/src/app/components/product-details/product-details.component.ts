@@ -9,8 +9,9 @@ import { CurrencyPipe } from '@angular/common';
   standalone: true,
   imports: [CurrencyPipe],
   templateUrl: './product-details.component.html',
-  styleUrl: './product-details.component.css'
+  styleUrls: ['./product-details.component.css']
 })
+
 export class ProductDetailsComponent implements OnInit {
 
   product!: Product;
